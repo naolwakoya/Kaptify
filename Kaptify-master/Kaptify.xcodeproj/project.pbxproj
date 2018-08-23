@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71CAC89D3D3D5029E2156441 /* Pods_Kaptify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B30E3B31E469F504C6B325 /* Pods_Kaptify.framework */; };
+		B735668620FEF3D10038370A /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735668520FEF3D10038370A /* DataFetcher.swift */; };
+		B735668920FEF4060038370A /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735668820FEF4060038370A /* AlbumModel.swift */; };
+		B735668B20FEF41B0038370A /* MetadataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735668A20FEF41B0038370A /* MetadataModel.swift */; };
+		B735668D21017E470038370A /* AlbumZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735668C21017E470038370A /* AlbumZoomViewController.swift */; };
+		B7356691210195FA0038370A /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7356690210195FA0038370A /* DropDownView.swift */; };
+		B735669B211BDCB70038370A /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7356699211BDCB70038370A /* CommentTableViewCell.swift */; };
+		B735669C211BDCB70038370A /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B735669A211BDCB70038370A /* CommentTableViewCell.xib */; };
+		B73BBE6820E06FC700F27C16 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73BBE6720E06FC700F27C16 /* RegisterViewController.swift */; };
+		B74BB67520E1D41300C9DA19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74BB67420E1D41300C9DA19 /* GoogleService-Info.plist */; };
+		B74F53E7211D296A008A3C6E /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F53E6211D296A008A3C6E /* MenuBar.swift */; };
+		B758A6D1212BA8E60084D9C7 /* HorizontalCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758A6D0212BA8E60084D9C7 /* HorizontalCollection.swift */; };
+		B758A6E3212D1C460084D9C7 /* CommentsTableViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758A6E2212D1C460084D9C7 /* CommentsTableViewCollectionViewCell.swift */; };
+		B758A6E5212D1C8D0084D9C7 /* AlbumViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758A6E4212D1C8D0084D9C7 /* AlbumViewCollectionViewCell.swift */; };
+		B758A6EB212E34C90084D9C7 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758A6EA212E34C90084D9C7 /* CommentModel.swift */; };
+		B75EBD2320E0600E0012C34F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EBD2220E0600E0012C34F /* AppDelegate.swift */; };
+		B75EBD2520E0600E0012C34F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75EBD2420E0600E0012C34F /* HomeViewController.swift */; };
+		B75EBD2820E0600E0012C34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75EBD2620E0600E0012C34F /* Main.storyboard */; };
+		B75EBD2A20E060100012C34F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B75EBD2920E060100012C34F /* Assets.xcassets */; };
+		B75EBD2D20E060100012C34F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75EBD2B20E060100012C34F /* LaunchScreen.storyboard */; };
+		B7C05F2720E34DF600B26E0A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C05F2620E34DF600B26E0A /* LoginViewController.swift */; };
+		B7C05F2B20E5C4A600B26E0A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C05F2A20E5C4A600B26E0A /* UIColor+Extensions.swift */; };
+		B7C05F2E20E5D3F000B26E0A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C05F2D20E5D3F000B26E0A /* CustomTabBarController.swift */; };
+		B7E21D8520EC5CBC00D60FE1 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E21D8320EC5CBC00D60FE1 /* AlbumCollectionViewCell.swift */; };
+		B7E21D8620EC5CBC00D60FE1 /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E21D8420EC5CBC00D60FE1 /* AlbumCollectionViewCell.xib */; };
+		B7E21D8B20F83D0E00D60FE1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E21D8A20F83D0E00D60FE1 /* ProfileViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CE4FE9912F1AD6845A4030A /* Pods-Kaptify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaptify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kaptify/Pods-Kaptify.debug.xcconfig"; sourceTree = "<group>"; };
+		75B30E3B31E469F504C6B325 /* Pods_Kaptify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaptify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B735668520FEF3D10038370A /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		B735668820FEF4060038370A /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		B735668A20FEF41B0038370A /* MetadataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataModel.swift; sourceTree = "<group>"; };
+		B735668C21017E470038370A /* AlbumZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumZoomViewController.swift; sourceTree = "<group>"; };
+		B7356690210195FA0038370A /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
+		B7356699211BDCB70038370A /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		B735669A211BDCB70038370A /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		B73BBE6720E06FC700F27C16 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		B74BB67420E1D41300C9DA19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B74F53E6211D296A008A3C6E /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		B758A6D0212BA8E60084D9C7 /* HorizontalCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollection.swift; sourceTree = "<group>"; };
+		B758A6E2212D1C460084D9C7 /* CommentsTableViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		B758A6E4212D1C8D0084D9C7 /* AlbumViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		B758A6EA212E34C90084D9C7 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		B75EBD1F20E0600E0012C34F /* Kaptify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaptify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75EBD2220E0600E0012C34F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B75EBD2420E0600E0012C34F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B75EBD2720E0600E0012C34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B75EBD2920E060100012C34F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B75EBD2C20E060100012C34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B75EBD2E20E060100012C34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7C05F2620E34DF600B26E0A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B7C05F2A20E5C4A600B26E0A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B7C05F2D20E5D3F000B26E0A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		B7E21D8320EC5CBC00D60FE1 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7E21D8420EC5CBC00D60FE1 /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7E21D8A20F83D0E00D60FE1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C02998E938D12186454403E6 /* Pods-Kaptify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaptify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kaptify/Pods-Kaptify.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B75EBD1C20E0600E0012C34F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CAC89D3D3D5029E2156441 /* Pods_Kaptify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		109BADE1D3839209CF8AA6A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75B30E3B31E469F504C6B325 /* Pods_Kaptify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C3EE87DAB4D42EF58F905A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CE4FE9912F1AD6845A4030A /* Pods-Kaptify.debug.xcconfig */,
+				C02998E938D12186454403E6 /* Pods-Kaptify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B735668420FEF3AF0038370A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B735668520FEF3D10038370A /* DataFetcher.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B758A6D6212D1A200084D9C7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B758A6E6212D1DE00084D9C7 /* Models */,
+				B758A6D9212D1A4C0084D9C7 /* Controllers */,
+				B758A6D8212D1A460084D9C7 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B758A6D7212D1A290084D9C7 /* AlbumZoom */ = {
+			isa = PBXGroup;
+			children = (
+				B758A6E7212D1E220084D9C7 /* Models */,
+				B758A6DC212D1ACB0084D9C7 /* Controllers */,
+				B758A6DE212D1AF70084D9C7 /* Views */,
+			);
+			path = AlbumZoom;
+			sourceTree = "<group>";
+		};
+		B758A6D8212D1A460084D9C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7E21D8320EC5CBC00D60FE1 /* AlbumCollectionViewCell.swift */,
+				B7E21D8420EC5CBC00D60FE1 /* AlbumCollectionViewCell.xib */,
+				B7356690210195FA0038370A /* DropDownView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B758A6D9212D1A4C0084D9C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7C05F2D20E5D3F000B26E0A /* CustomTabBarController.swift */,
+				B75EBD2420E0600E0012C34F /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B758A6DA212D1A8E0084D9C7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B758A6DB212D1A980084D9C7 /* Controllers */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B758A6DB212D1A980084D9C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B7E21D8A20F83D0E00D60FE1 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B758A6DC212D1ACB0084D9C7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B735668C21017E470038370A /* AlbumZoomViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B758A6DD212D1ADC0084D9C7 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				B73BBE6720E06FC700F27C16 /* RegisterViewController.swift */,
+				B7C05F2620E34DF600B26E0A /* LoginViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		B758A6DE212D1AF70084D9C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B74F53E6211D296A008A3C6E /* MenuBar.swift */,
+				B758A6DF212D1B870084D9C7 /* CollectionViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B758A6DF212D1B870084D9C7 /* CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				B758A6D0212BA8E60084D9C7 /* HorizontalCollection.swift */,
+				B7356699211BDCB70038370A /* CommentTableViewCell.swift */,
+				B735669A211BDCB70038370A /* CommentTableViewCell.xib */,
+				B758A6E2212D1C460084D9C7 /* CommentsTableViewCollectionViewCell.swift */,
+				B758A6E4212D1C8D0084D9C7 /* AlbumViewCollectionViewCell.swift */,
+			);
+			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		B758A6E6212D1DE00084D9C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B735668820FEF4060038370A /* AlbumModel.swift */,
+				B735668A20FEF41B0038370A /* MetadataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B758A6E7212D1E220084D9C7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B758A6EA212E34C90084D9C7 /* CommentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B75EBD1620E0600E0012C34F = {
+			isa = PBXGroup;
+			children = (
+				B75EBD2920E060100012C34F /* Assets.xcassets */,
+				B75EBD2120E0600E0012C34F /* Kaptify */,
+				B75EBD2020E0600E0012C34F /* Products */,
+				7C3EE87DAB4D42EF58F905A5 /* Pods */,
+				109BADE1D3839209CF8AA6A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B75EBD2020E0600E0012C34F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B75EBD1F20E0600E0012C34F /* Kaptify.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B75EBD2120E0600E0012C34F /* Kaptify */ = {
+			isa = PBXGroup;
+			children = (
+				B758A6DD212D1ADC0084D9C7 /* Registration */,
+				B758A6DA212D1A8E0084D9C7 /* Profile */,
+				B758A6D7212D1A290084D9C7 /* AlbumZoom */,
+				B758A6D6212D1A200084D9C7 /* Home */,
+				B735668420FEF3AF0038370A /* Networking */,
+				B7C05F2920E5C48C00B26E0A /* Extensions */,
+				B75EBD2220E0600E0012C34F /* AppDelegate.swift */,
+				B75EBD2620E0600E0012C34F /* Main.storyboard */,
+				B75EBD2B20E060100012C34F /* LaunchScreen.storyboard */,
+				B75EBD2E20E060100012C34F /* Info.plist */,
+				B74BB67420E1D41300C9DA19 /* GoogleService-Info.plist */,
+			);
+			path = Kaptify;
+			sourceTree = "<group>";
+		};
+		B7C05F2920E5C48C00B26E0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7C05F2A20E5C4A600B26E0A /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B75EBD1E20E0600E0012C34F /* Kaptify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B75EBD3120E060100012C34F /* Build configuration list for PBXNativeTarget "Kaptify" */;
+			buildPhases = (
+				B36DEC6EDC051102D83EEB47 /* [CP] Check Pods Manifest.lock */,
+				B75EBD1B20E0600E0012C34F /* Sources */,
+				B75EBD1C20E0600E0012C34F /* Frameworks */,
+				B75EBD1D20E0600E0012C34F /* Resources */,
+				F7714C6F00BCE0828B29DFAC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kaptify;
+			productName = Kaptify;
+			productReference = B75EBD1F20E0600E0012C34F /* Kaptify.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B75EBD1720E0600E0012C34F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Sahil Kapal";
+				TargetAttributes = {
+					B75EBD1E20E0600E0012C34F = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = B75EBD1A20E0600E0012C34F /* Build configuration list for PBXProject "Kaptify" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B75EBD1620E0600E0012C34F;
+			productRefGroup = B75EBD2020E0600E0012C34F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B75EBD1E20E0600E0012C34F /* Kaptify */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B75EBD1D20E0600E0012C34F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B75EBD2D20E060100012C34F /* LaunchScreen.storyboard in Resources */,
+				B735669C211BDCB70038370A /* CommentTableViewCell.xib in Resources */,
+				B74BB67520E1D41300C9DA19 /* GoogleService-Info.plist in Resources */,
+				B7E21D8620EC5CBC00D60FE1 /* AlbumCollectionViewCell.xib in Resources */,
+				B75EBD2A20E060100012C34F /* Assets.xcassets in Resources */,
+				B75EBD2820E0600E0012C34F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B36DEC6EDC051102D83EEB47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kaptify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7714C6F00BCE0828B29DFAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kaptify/Pods-Kaptify-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kaptify/Pods-Kaptify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B75EBD1B20E0600E0012C34F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C05F2720E34DF600B26E0A /* LoginViewController.swift in Sources */,
+				B735668B20FEF41B0038370A /* MetadataModel.swift in Sources */,
+				B758A6E3212D1C460084D9C7 /* CommentsTableViewCollectionViewCell.swift in Sources */,
+				B74F53E7211D296A008A3C6E /* MenuBar.swift in Sources */,
+				B735668920FEF4060038370A /* AlbumModel.swift in Sources */,
+				B7356691210195FA0038370A /* DropDownView.swift in Sources */,
+				B7C05F2B20E5C4A600B26E0A /* UIColor+Extensions.swift in Sources */,
+				B7C05F2E20E5D3F000B26E0A /* CustomTabBarController.swift in Sources */,
+				B73BBE6820E06FC700F27C16 /* RegisterViewController.swift in Sources */,
+				B735669B211BDCB70038370A /* CommentTableViewCell.swift in Sources */,
+				B758A6EB212E34C90084D9C7 /* CommentModel.swift in Sources */,
+				B75EBD2520E0600E0012C34F /* HomeViewController.swift in Sources */,
+				B75EBD2320E0600E0012C34F /* AppDelegate.swift in Sources */,
+				B758A6D1212BA8E60084D9C7 /* HorizontalCollection.swift in Sources */,
+				B735668620FEF3D10038370A /* DataFetcher.swift in Sources */,
+				B735668D21017E470038370A /* AlbumZoomViewController.swift in Sources */,
+				B7E21D8B20F83D0E00D60FE1 /* ProfileViewController.swift in Sources */,
+				B7E21D8520EC5CBC00D60FE1 /* AlbumCollectionViewCell.swift in Sources */,
+				B758A6E5212D1C8D0084D9C7 /* AlbumViewCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B75EBD2620E0600E0012C34F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B75EBD2720E0600E0012C34F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B75EBD2B20E060100012C34F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B75EBD2C20E060100012C34F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B75EBD2F20E060100012C34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B75EBD3020E060100012C34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B75EBD3220E060100012C34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CE4FE9912F1AD6845A4030A /* Pods-Kaptify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PXEBYV3Z8;
+				INFOPLIST_FILE = Kaptify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sahilkapal.Kaptify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B75EBD3320E060100012C34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02998E938D12186454403E6 /* Pods-Kaptify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2PXEBYV3Z8;
+				INFOPLIST_FILE = Kaptify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sahilkapal.Kaptify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B75EBD1A20E0600E0012C34F /* Build configuration list for PBXProject "Kaptify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B75EBD2F20E060100012C34F /* Debug */,
+				B75EBD3020E060100012C34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B75EBD3120E060100012C34F /* Build configuration list for PBXNativeTarget "Kaptify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B75EBD3220E060100012C34F /* Debug */,
+				B75EBD3320E060100012C34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B75EBD1720E0600E0012C34F /* Project object */;
+}
