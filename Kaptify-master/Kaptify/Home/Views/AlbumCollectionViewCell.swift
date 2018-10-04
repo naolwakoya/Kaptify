@@ -2,8 +2,8 @@
 //  AlbumCollectionViewCell.swift
 //  Kaptify
 //
-//  Created by Sahil Kapal on 2018-07-03.
-//  Copyright © 2018 Sahil Kapal. All rights reserved.
+//  Created by Naol Gushu on 2018-07-03.
+//  Copyright © 2018 Naol Gushu. All rights reserved.
 //
 
 import UIKit

@@ -1,10 +1,8 @@
 //
 //  DataFetcher.swift
 //  Kaptify
-//
-//  Created by Sahil Kapal on 2018-07-18.
-//  Copyright © 2018 Sahil Kapal. All rights reserved.
-//
+//copy right of Naol
+// date modified 19/09/2018
 
 import Foundation
 
