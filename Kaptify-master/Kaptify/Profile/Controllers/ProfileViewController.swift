@@ -2,7 +2,7 @@
 //  ProfileViewController.swift
 //  Kaptify
 //
-//  Created by Sahil Kapal on 2018-07-12.
+//  Created by Naol Gushu on 2018-07-12.
 //  Copyright © 2018 Sahil Kapal. All rights reserved.
 //
 
