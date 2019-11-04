@@ -2,8 +2,8 @@
 //  RegisterViewController.swift
 //  Kaptify
 //
-//  Created by Sahil Kapal on 2018-06-24.
-//  Copyright © 2018 Sahil Kapal. All rights reserved.
+//  Created by Naol Gushu on 2018-06-24.
+//  Copyright © 2018 Naol Gushu. All rights reserved.
 //
 
 import UIKit
@@ -11,21 +11,21 @@ import Firebase
 
 
 class RegisterViewController: UIViewController {
-    
+
     let IMAGE_WIDTH: CGFloat = 235
     let IMAGE_HEIGHT: CGFloat = 268
     let CANCEL_WIDTH: CGFloat = 25
     let CANCEL_HEIGHT: CGFloat = 27
-    
+
     // MARK: Locking screen rotation
     override var shouldAutorotate: Bool {
         return false
     }
-    
+
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
-    
+
     // MARK: UI Elements to be added to View
     let cancelButton: UIButton = {
         let cancel = UIButton()
@@ -36,11 +36,11 @@ class RegisterViewController: UIViewController {
 
         return cancel
     }()
-    
+
     @objc func handleCancel() {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     let registerLabel: UILabel = {
         let label = UILabel()
         label.text = "Register"
@@ -48,7 +48,7 @@ class RegisterViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     let loginCardImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Login_image")
@@ -56,7 +56,7 @@ class RegisterViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    
+
     let emailUIView: UIView = {
         let emailBG = UIView()
         emailBG.backgroundColor = .white
@@ -64,7 +64,7 @@ class RegisterViewController: UIViewController {
         emailBG.translatesAutoresizingMaskIntoConstraints = false
         return emailBG
     }()
-    
+
     let passUIView: UIView = {
         let passBG = UIView()
         passBG.backgroundColor = .white
@@ -72,7 +72,7 @@ class RegisterViewController: UIViewController {
         passBG.translatesAutoresizingMaskIntoConstraints = false
         return passBG
     }()
-    
+
     let emailTextField: UITextField = {
         let email = UITextField()
         email.backgroundColor = .white
@@ -81,7 +81,7 @@ class RegisterViewController: UIViewController {
         email.translatesAutoresizingMaskIntoConstraints = false
         return email
     }()
-    
+
     let passTextField: UITextField = {
         let pass = UITextField()
         pass.backgroundColor = .white
@@ -91,7 +91,7 @@ class RegisterViewController: UIViewController {
         pass.translatesAutoresizingMaskIntoConstraints = false
         return pass
     }()
-    
+
     let userUIView: UIView = {
         let userBG = UIView()
         userBG.backgroundColor = .white
@@ -99,7 +99,7 @@ class RegisterViewController: UIViewController {
         userBG.translatesAutoresizingMaskIntoConstraints = false
         return userBG
     }()
-    
+
     let userTextField: UITextField = {
         let user = UITextField()
         user.backgroundColor = .white
@@ -108,7 +108,7 @@ class RegisterViewController: UIViewController {
         user.translatesAutoresizingMaskIntoConstraints = false
         return user
     }()
-    
+
     lazy var registerButton: UIButton = {
         let register = UIButton(type: .system) // shows button animation
         register.backgroundColor = UIColor(r: 28, b: 27, g: 27)
@@ -116,33 +116,33 @@ class RegisterViewController: UIViewController {
         register.setTitleColor(.white, for: .normal)
         register.layer.cornerRadius = 20
         register.translatesAutoresizingMaskIntoConstraints = false
-        
+
         register.addTarget(self, action: #selector(handleRegistration), for: .touchUpInside)
         return register
     }()
-    
+
     @objc func handleRegistration() {
         guard let email = emailTextField.text, let password = passTextField.text, let username = userTextField.text else {
             print("Error: Invalid form")
             //TODO: Add popup view directing user to input valid fields
             return
         }
-        
+
         // Register user to firebase
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user: User?, err) in
             if err != nil {
                 print(err!)
                 return
             }
-            
+
             guard let uid = user?.uid else {
                 return
             }
-            
+
             let ref = Database.database().reference(fromURL: "https://kaptify-5a0af.firebaseio.com/")
             let usersRef = ref.child("Users").child(uid)
             let values = ["Username": username, "Email": email]
-            
+
             usersRef.updateChildValues(values, withCompletionBlock: { (error, ref) in
                 if error != nil {
                     print(error ?? "Error occured")
@@ -152,10 +152,10 @@ class RegisterViewController: UIViewController {
             /* Authentication successful, pop loginview */
             self.dismiss(animated: true, completion: nil)
             // maybe show a wheel load spin?
-            
+
         })
     }
-    
+
     lazy var loginButton: UIButton = {
         let login = UIButton(type: .system)
         login.setTitle("Login", for: .normal)
@@ -165,7 +165,7 @@ class RegisterViewController: UIViewController {
         login.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return login
     }()
-    
+
     let loginMessageLabel: UILabel = {
         let message = UILabel()
         message.text = "Existing member?"
@@ -173,7 +173,7 @@ class RegisterViewController: UIViewController {
         message.translatesAutoresizingMaskIntoConstraints = false
         return message
     }()
-    
+
     @objc func handleLogin() {
         let loginController = LoginViewController()
         present(loginController, animated: true, completion: nil)
@@ -188,7 +188,7 @@ class RegisterViewController: UIViewController {
         }
         self.hideKeyboardWhenTappedAround()
     }
-    
+
     func setupViewsAndConstraints() {
         // add subviews
         view.addSubview(loginCardImage)
@@ -203,7 +203,7 @@ class RegisterViewController: UIViewController {
         view.addSubview(registerLabel)
         view.addSubview(cancelButton)
         view.addSubview(loginMessageLabel)
-        
+
         // setup constraints
         setupLoginCardImage()
         setupLoginButton()
@@ -218,7 +218,7 @@ class RegisterViewController: UIViewController {
         setupCancelButton()
         setupLoginMessageLabel()
     }
-    
+
     // MARK: Setup view constraints
     func setupLoginMessageLabel() {
         // x, y, width, height constraints
@@ -226,7 +226,7 @@ class RegisterViewController: UIViewController {
         loginMessageLabel.topAnchor.constraint(equalTo: loginButton.topAnchor).isActive = true
         loginMessageLabel.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupCancelButton() {
         // x, y, width, height constraints
         cancelButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50).isActive = true
@@ -234,7 +234,7 @@ class RegisterViewController: UIViewController {
         cancelButton.widthAnchor.constraint(equalToConstant: CANCEL_WIDTH).isActive = true
         cancelButton.heightAnchor.constraint(equalToConstant: CANCEL_HEIGHT).isActive = true
     }
-    
+
     func setupRegisterLabel() {
         // x, y, width, height constraints
         registerLabel.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 8).isActive = true
@@ -251,7 +251,7 @@ class RegisterViewController: UIViewController {
         userTextField.widthAnchor.constraint(equalToConstant: 185).isActive = true
         userTextField.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupUserUIView() {
         // x, y, width, height constraints
         userUIView.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 8).isActive = true
@@ -260,7 +260,7 @@ class RegisterViewController: UIViewController {
         userUIView.widthAnchor.constraint(equalToConstant: 185).isActive = true
         userUIView.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupEmailUIView() {
         // x, y, width, height constraints
         emailUIView.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 8).isActive = true
@@ -269,7 +269,7 @@ class RegisterViewController: UIViewController {
         emailUIView.widthAnchor.constraint(equalToConstant: 185).isActive = true
         emailUIView.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupPassUIView() {
         // x, y, width, height constraints
         passUIView.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 8).isActive = true
@@ -278,7 +278,7 @@ class RegisterViewController: UIViewController {
         passUIView.widthAnchor.constraint(equalToConstant: 185).isActive = true
         passUIView.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupEmailTextField() {
         // x, y, width, height constraints
         emailTextField.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 12).isActive = true
@@ -287,7 +287,7 @@ class RegisterViewController: UIViewController {
         emailTextField.widthAnchor.constraint(equalToConstant: 185).isActive = true
         emailTextField.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupPassTextField() {
         // x, y, width, height constraints
         passTextField.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 12).isActive = true
@@ -296,8 +296,8 @@ class RegisterViewController: UIViewController {
         passTextField.widthAnchor.constraint(equalToConstant: 185).isActive = true
         passTextField.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
-    
+
+
     func setupRegisterButton() {
         // x, y, width, height constraints
         registerButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -305,14 +305,14 @@ class RegisterViewController: UIViewController {
         registerButton.widthAnchor.constraint(equalToConstant: IMAGE_WIDTH - 5).isActive = true
         registerButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
-    
+
     func setupLoginButton() {
         // x, y, width, height constraints
         loginButton.leftAnchor.constraint(equalTo: loginMessageLabel.rightAnchor, constant: 5).isActive = true
         loginButton.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 12).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 40).isActive = false
     }
-    
+
     func setupLoginCardImage() {
         // x, y, width, height constraints
         loginCardImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -320,7 +320,7 @@ class RegisterViewController: UIViewController {
         loginCardImage.widthAnchor.constraint(equalToConstant: IMAGE_WIDTH).isActive = true
         loginCardImage.heightAnchor.constraint(equalToConstant: IMAGE_HEIGHT).isActive = true
     }
-    
+
 
 }
 
@@ -332,9 +332,9 @@ extension RegisterViewController {
     private func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
+
     }
-    
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

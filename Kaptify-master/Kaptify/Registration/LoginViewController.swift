@@ -2,20 +2,20 @@
 //  LoginViewController.swift
 //  Kaptify
 //
-//  Created by Sahil Kapal on 2018-06-27.
-//  Copyright © 2018 Sahil Kapal. All rights reserved.
+//  Created by Naol Gushu on 2018-06-27.
+//  Copyright © 2018 Naol Gushu. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-    
+
     let IMAGE_WIDTH: CGFloat = 235
     let IMAGE_HEIGHT: CGFloat = 268
     let CANCEL_WIDTH: CGFloat = 64
     let CANCEL_HEIGHT: CGFloat = 64
-    
+
     // MARK: UI Elements to be added to View
     let cancelButton: UIButton = {
         let cancel = UIButton()
@@ -25,14 +25,14 @@ class LoginViewController: UIViewController {
         cancel.setImage(xImageView.image, for: .normal)
         cancel.translatesAutoresizingMaskIntoConstraints = false
         cancel.addTarget(self, action: #selector(handleCancel), for: .touchUpInside)
-        
+
         return cancel
     }()
-    
+
     @objc func handleCancel() {
         dismissViewsOnSuccess()
     }
-    
+
     let loginCardImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Login_image")
@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    
+
     let loginLabel: UILabel = {
         let label = UILabel()
         label.text = "Login"
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     let emailUIView: UIView = {
         let emailBG = UIView()
         emailBG.backgroundColor = .white
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
         emailBG.translatesAutoresizingMaskIntoConstraints = false
         return emailBG
     }()
-    
+
     let passUIView: UIView = {
         let passBG = UIView()
         passBG.backgroundColor = .white
@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
         passBG.translatesAutoresizingMaskIntoConstraints = false
         return passBG
     }()
-    
+
     let emailTextField: UITextField = {
         let email = UITextField()
         email.backgroundColor = .white
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
         email.translatesAutoresizingMaskIntoConstraints = false
         return email
     }()
-    
+
     let passTextField: UITextField = {
         let pass = UITextField()
         pass.backgroundColor = .white
@@ -83,7 +83,7 @@ class LoginViewController: UIViewController {
         pass.translatesAutoresizingMaskIntoConstraints = false
         return pass
     }()
-    
+
     lazy var loginButton: UIButton = {
         let login = UIButton(type: .system) // shows button animation
         login.backgroundColor = UIColor(r: 28, b: 27, g: 27)
@@ -91,12 +91,12 @@ class LoginViewController: UIViewController {
         login.setTitleColor(.white, for: .normal)
         login.layer.cornerRadius = 20
         login.translatesAutoresizingMaskIntoConstraints = false
-        
+
         /*TODO: */
         login.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return login
     }()
-    
+
     @objc func handleLogin () {
         guard let email = emailTextField.text, let password = passTextField.text else { return }
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
@@ -117,7 +117,7 @@ class LoginViewController: UIViewController {
 //        }
         self.hideKeyboardWhenTappedAround()
     }
-    
+
     func setupViewsAndConstraints() {
         // Add subviews to view
 
@@ -129,8 +129,8 @@ class LoginViewController: UIViewController {
         self.view.addSubview(emailTextField)
         self.view.addSubview(passTextField)
         self.view.addSubview(loginButton)
-        
-        
+
+
         // Add constraints to subviews
         setupCancelButton()
         setupLoginCardImage()
@@ -141,7 +141,7 @@ class LoginViewController: UIViewController {
         setupPassTextField()
         setupLoginButton()
     }
-    
+
     func setupCancelButton() {
         // x, y, width, height constraints
         cancelButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40).isActive = true
@@ -149,7 +149,7 @@ class LoginViewController: UIViewController {
         cancelButton.widthAnchor.constraint(equalToConstant: CANCEL_WIDTH).isActive = true
         cancelButton.heightAnchor.constraint(equalToConstant: CANCEL_HEIGHT).isActive = true
     }
-    
+
     func setupLoginCardImage() {
         // x, y, width, height constraints
         loginCardImage.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -157,7 +157,7 @@ class LoginViewController: UIViewController {
         loginCardImage.widthAnchor.constraint(equalToConstant: IMAGE_WIDTH).isActive = true
         loginCardImage.heightAnchor.constraint(equalToConstant: IMAGE_HEIGHT).isActive = true
     }
-    
+
     func setupLoginLabel() {
         // x, y, width, height constraints
         loginLabel.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 8).isActive = true
@@ -166,7 +166,7 @@ class LoginViewController: UIViewController {
         loginLabel.widthAnchor.constraint(equalToConstant: 185).isActive = true
         loginLabel.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupEmailUIView() {
         // x, y, width, height constraints
         emailUIView.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 8).isActive = true
@@ -175,7 +175,7 @@ class LoginViewController: UIViewController {
         emailUIView.widthAnchor.constraint(equalToConstant: 185).isActive = true
         emailUIView.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupPassUIView() {
         // x, y, width, height constraints
         passUIView.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 8).isActive = true
@@ -184,7 +184,7 @@ class LoginViewController: UIViewController {
         passUIView.widthAnchor.constraint(equalToConstant: 185).isActive = true
         passUIView.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupEmailTextField() {
         // x, y, width, height constraints
         emailTextField.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 12).isActive = true
@@ -193,7 +193,7 @@ class LoginViewController: UIViewController {
         emailTextField.widthAnchor.constraint(equalToConstant: 185).isActive = true
         emailTextField.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupPassTextField() {
         // x, y, width, height constraints
         passTextField.leftAnchor.constraint(equalTo: loginCardImage.leftAnchor, constant: 12).isActive = true
@@ -202,7 +202,7 @@ class LoginViewController: UIViewController {
         passTextField.widthAnchor.constraint(equalToConstant: 185).isActive = true
         passTextField.heightAnchor.constraint(equalToConstant: 28).isActive = true
     }
-    
+
     func setupLoginButton() {
         // x, y, width, height constraints
         loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -220,9 +220,9 @@ extension LoginViewController {
     private func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
+
     }
-    
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

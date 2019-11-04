@@ -1,7 +1,7 @@
 //
 //  DataFetcher.swift
 //  Kaptify
-//copy right of Naol
+//copy right of Naol Gushu
 // date modified 19/09/2018
 
 import Foundation

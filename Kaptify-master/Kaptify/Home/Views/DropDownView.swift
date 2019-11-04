@@ -2,8 +2,8 @@
 //  DropDownView.swift
 //  Kaptify
 //
-//  Created by Sahil Kapal on 2018-07-20.
-//  Copyright © 2018 Sahil Kapal. All rights reserved.
+//  Created by Naol Gushu on 2018-07-20.
+//  Copyright © 2018 Naol Gushu. All rights reserved.
 //
 
 import UIKit
@@ -11,12 +11,12 @@ import UIKit
 
 
 class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
-    
+
     let dropDownOptions = ["📈  Albums", "🌊  Albums"]
     var tableView = UITableView()
     let dataFetcher = DataFetcher()
     var dropDelegate: NetworkRequestDelegate!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(tableView)
@@ -30,30 +30,30 @@ class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.bringSubview(toFront: tableView)
         self.tableView.isScrollEnabled = false
     }
-    
-    
+
+
     func setupTableView() {
         tableView.tableFooterView = nil
-        
-        
+
+
         tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dropDownOptions.count
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = dropDownOptions[indexPath.row]
@@ -64,7 +64,7 @@ class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = UIColor(r: 28, b: 27, g: 27)
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.item == 0 {
             // download default data (TOP)
@@ -74,9 +74,6 @@ class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
             dropDelegate.requestDataAndPopulateView(jsonString: "https://rss.itunes.apple.com/api/v1/us/apple-music/new-releases/all/25/explicit.json")
         }
     }
-    
-    
+
+
 }
-
-
-
